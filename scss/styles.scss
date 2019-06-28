@@ -70,9 +70,7 @@ nav {
 
 .cover {
 	height: 100vh;
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
+	@include bgcover;
 	background-color: #000;
 	color: #fff;
 	&__title {
@@ -146,8 +144,7 @@ nav {
 	&__title {
 		text-transform: uppercase;
 		position: relative;
-		&::after,
-		&::before {
+		@include ba {
 			content:'';
 			position: absolute;
 		}
@@ -199,23 +196,46 @@ nav {
 }
 
 .reviews {
-	background-image: url(../img/revbg.png);
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
+	@include bgcover;
 	background-color: #4a3949;
 }
 
 .rev {
 	text-align: center;
 	color: #fff;
-	padding-top: 75px;
+	padding: 75px 50px;
 	&__quote {
 		font-size: 3rem;
 	}
 	&__author {
 		font-size: 1.8rem;
 		font-style: italic;
-		
+		@include ba {
+			content: '-';
+		}
+	}
+	&__items {
+		list-style-type: none;
+
+	}
+	&__item {
+		display: inline-block;
+	}
+	&__btn {
+		outline: none;
+		border: 1px solid #7a6e79;
+		background-color:: #7a6e79;
+		margin: 5px;
+		width: 15px;
+		height: 15px;
+		border-radius: 50%;
+		&--active {
+			border: 1px solid #fff;
+			background-color:: #fff;
+		}
+		@include hover {
+			border: 1px solid #fff;
+			background-color: #fff;
+		}
 	}
 }

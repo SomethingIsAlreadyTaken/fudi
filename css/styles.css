@@ -509,7 +509,6 @@ nav {
       transform: scale(0.9); }
 
 .reviews {
-  background-image: url(../img/revbg.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -518,9 +517,32 @@ nav {
 .rev {
   text-align: center;
   color: #fff;
-  padding-top: 75px; }
+  padding: 75px 50px; }
   .rev__quote {
     font-size: 3rem; }
   .rev__author {
     font-size: 1.8rem;
     font-style: italic; }
+    .rev__author::before, .rev__author::after {
+      content: '-'; }
+  .rev__items {
+    list-style-type: none; }
+  .rev__item {
+    display: inline-block; }
+  .rev__btn {
+    outline: none;
+    border: 1px solid #7a6e79;
+    background-color: #7a6e79;
+    margin: 5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    -webkit-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in; }
+    .rev__btn--active {
+      border: 1px solid #fff;
+      background-color: #fff; }
+    .rev__btn:hover, .rev__btn:focus, .rev__btn:active, .rev__btn--active {
+      border: 1px solid #fff;
+      background-color: #fff; }

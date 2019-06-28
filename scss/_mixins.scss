@@ -15,3 +15,14 @@
 		@content;
 	}
 }
+
+@mixin bgcover {
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+@mixin ba {
+	&::after,
+	&::before
+}
