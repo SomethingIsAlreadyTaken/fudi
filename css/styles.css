@@ -326,6 +326,18 @@ body {
   width: 96%;
   padding: 0 15px;
   margin: 0 auto; }
+  .container--big {
+    width: 100%; }
+  .container--footer {
+    padding: 0;
+    width: 100%; }
+  .container--gets {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+    background-color: #fff;
+    margin: 100px 50px; }
 
 header {
   position: absolute;
@@ -445,14 +457,6 @@ nav {
     background: #fff;
     color: #000; }
 
-.gets {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  text-align: center;
-  background-color: #fff;
-  margin: 100px 50px; }
-
 .get {
   margin: 0 25px; }
   .get__title {
@@ -471,10 +475,8 @@ nav {
       -o-transform: translate(-50%);
       transform: translate(-50%); }
 
-.intro-app {
-  background-color: #f7f7f7; }
-
 .app {
+  background-color: #f7f7f7;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -649,3 +651,51 @@ nav {
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%); }
+
+.stats {
+  padding-top: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around; }
+  .stats__block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .stats__number {
+    font-size: 3.6rem;
+    font-weight: 700; }
+  .stats__name {
+    font-size: 1.6rem;
+    font-weight: 300; }
+
+.copy {
+  background-color: #f7f7f7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  margin: 40px auto;
+  padding-top: 40px;
+  border-top: 1px solid #c1c1c1; }
+  .copy__rights, .copy__design {
+    color: #c1c1c1;
+    font-size: 1.4rem; }
+  .copy__link {
+    color: #000;
+    border-bottom: 1px solid transparent;
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in; }
+    .copy__link:hover, .copy__link:focus, .copy__link:active, .copy__link--active {
+      border-color: #000; }
