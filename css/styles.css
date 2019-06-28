@@ -322,7 +322,7 @@ body {
   min-height: 100%; }
 
 .container {
-  max-width: 1170px;
+  max-width: 1600px;
   width: 96%;
   padding: 0 15px;
   margin: 0 auto; }
@@ -406,7 +406,8 @@ nav {
       -o-transition: all 0.3s ease-in;
       transition: all 0.3s ease-in; }
       .cover__text--link:hover, .cover__text--link:focus, .cover__text--link:active, .cover__text--link--active {
-        border-color: transparent; }
+        border-color: transparent;
+        opacity: .8; }
 
 .flex {
   display: -webkit-box;
@@ -443,3 +444,83 @@ nav {
   .btn:hover, .btn:focus, .btn:active, .btn--active {
     background: #fff;
     color: #000; }
+
+.gets {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  background-color: #fff;
+  margin: 100px 50px; }
+
+.get {
+  margin: 0 25px; }
+  .get__title {
+    text-transform: uppercase;
+    position: relative; }
+    .get__title::after, .get__title::before {
+      content: '';
+      position: absolute; }
+    .get__title::after {
+      border-bottom: 1px solid #f57365;
+      width: 30%;
+      top: 100%;
+      left: 50%;
+      -webkit-transform: translate(-50%);
+      -ms-transform: translate(-50%);
+      -o-transform: translate(-50%);
+      transform: translate(-50%); }
+
+.intro-app {
+  background-color: #f7f7f7; }
+
+.app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .app__phone {
+    padding-top: 100px;
+    margin: 0 auto; }
+  .app__info {
+    margin-left: 120px; }
+  .app__title {
+    font-size: 1.8rem;
+    text-transform: uppercase; }
+  .app__article {
+    font-size: 1.6rem; }
+  .app__img {
+    min-width: 550px;
+    min-height: 700px; }
+  .app__btn {
+    margin: 0 5px;
+    -webkit-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in; }
+    .app__btn:hover, .app__btn:focus, .app__btn:active, .app__btn--active {
+      -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+      -o-transform: scale(0.9);
+      transform: scale(0.9); }
+
+.reviews {
+  background-image: url(../img/revbg.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #4a3949; }
+
+.rev {
+  text-align: center;
+  color: #fff;
+  padding-top: 75px; }
+  .rev__quote {
+    font-size: 3rem; }
+  .rev__author {
+    font-size: 1.8rem;
+    font-style: italic; }
