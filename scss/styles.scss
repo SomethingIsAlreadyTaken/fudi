@@ -1,13 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap');
 
 @import 'normalize';
+@import 'mixins';
 
 * {
 	box-sizing: border-box;
 }
 
 html {
-	font: 10px/1.6 'Open Sans', serif;
+	font: 10px/1.6 'Lato', sans-serif;
 	height: 100%;
 }
 
@@ -15,4 +16,119 @@ body {
 	font-size: 1.6rem;
 	color: #333;
 	min-height: 100%;
+}
+
+.container {
+	max-width: 1170px;
+	width: 96%;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+header {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+}
+
+nav {
+	padding: 30px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.logo {
+	@include hover {
+		transform: scale(1.4);
+	}
+}
+
+.menu {
+	margin: 0;
+	padding: 0;
+	&__item {
+		display: inline-block;
+		margin: 0 15px;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	&__link {
+		color: #fff;
+		border-bottom: 1px solid transparent;
+		font-size: 1.6rem;
+		font-weight: 500;
+		text-transform: uppercase;
+		@include tdn();
+		@include hover {
+			border-color: #fff;
+		}
+	}
+}
+
+.cover {
+	height: 100vh;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: #000;
+	color: #fff;
+	&__title {
+		margin: 0 auto 20px;
+		line-height: 1;
+		font-size: 10rem;
+		font-weight: 900;
+		text-transform: uppercase;
+	}
+	&__subtitle {
+		font-style: italic;
+		font-weight: 700;
+		font-size: 3.6rem;
+		color: #e9dbda;
+		margin-bottom: 0px;
+	}
+	&__text {
+		font-size: 1.4rem;
+		margin: 20px;
+		&--link {
+			@include tdn();
+			color: #fff;
+			border-bottom: 1px solid #fff;
+			@include hover {
+			border-color: transparent;
+			}
+		}
+	}
+}
+
+.flex {
+	display: flex;
+	&--column {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.cover & {
+		height: 100%;
+	}
+}
+
+
+.btn {
+	width: 20%;
+	border-radius: 2px;
+	border: 2px solid #fff;
+	font-size: 1.8rem;
+	padding: 15px 20px;
+	margin: 10px;
+	color: #fff;
+	background: transparent;
+	text-align: center;
+	@include tdn();
+	@include hover {
+		background: #fff;
+		color: #000;
+	}
 }
