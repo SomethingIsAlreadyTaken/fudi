@@ -239,3 +239,91 @@ nav {
 		}
 	}
 }
+
+.section {
+	background-color: #fff;
+	padding: 100px 0;
+	margin: 0;
+	&__title {
+		font-size: 1.8rem;
+		text-transform: uppercase;
+		text-align: center;
+		position: relative;
+		@include ba {
+			content:'';
+			position: absolute;
+		}
+		&::after {
+			border-bottom: 1px solid #f57365;
+			width: 5%;
+			top: 100%;
+			left: 50%;
+			transform: translate(-50%);
+		}
+	}
+}
+
+.grid-container {
+	max-width: 1600px;
+	width: 100%;
+}
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: stretch;
+}
+
+.col {
+	height: 220px;
+	flex-basis: 19%;
+	margin: 0;
+	flex-grow: 1;
+}
+
+.recipes {
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+	@include hover {
+		opacity: .8;
+		transform: scale(.9);
+	}
+	&__link {
+		display: block;
+		text-decoration: none;
+		color: #fff;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+	}
+	&__title {
+		display: inline-block;
+		position: relative;
+		z-index: 3;
+		font-size: 3.6rem;
+		margin: 0;
+		padding: 0 auto;
+		line-height: 1;
+	}
+	&__count {
+		display: inline-block;
+		position: relative;
+		z-index: 3;
+		font-size: 1.5rem;
+		font-style: italic;
+	}
+	&__img {
+		min-width: 100%;
+		min-height: 100%;
+		position:absolute;
+		top: 50%;
+		left: 50%;
+		transform:translate(-50%,-50%);
+	}
+}

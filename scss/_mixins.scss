@@ -24,5 +24,7 @@
 
 @mixin ba {
 	&::after,
-	&::before
+	&::before {
+		@content;
+	}
 }
